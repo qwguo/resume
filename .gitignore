@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+.deploy*/
+.deploy_git/
+.vscode
+public/
+bower_components/
+origin_img/

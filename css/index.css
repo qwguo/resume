@@ -1,0 +1,530 @@
+@import url(normalize.css);
+@import url(//at.alicdn.com/t/font_1664193_w9cubk40g4d.css);
+body {
+  font-family: 'PingFang SC';
+}
+* {
+  box-sizing: border-box;
+}
+@keyframes show {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink-caret-1 {
+  50% {
+    border-color: #fff;
+  }
+}
+@keyframes blink-caret-2 {
+  50% {
+    border-color: transparent;
+  }
+}
+.section {
+  position: relative;
+}
+.section .con {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.section .bg,
+.section .img-bg {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.section .bg {
+  z-index: 2;
+}
+.section .img-bg {
+  z-index: 1;
+}
+.index-section .con {
+  flex-direction: column;
+  color: #fff;
+}
+.index-section .bg {
+  background: url(../images/index_bg.png) repeat;
+  opacity: 0.9;
+}
+.index-section .img-bg {
+  background-image: url(../images/about_img_bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.index-section .names {
+  font-size: 0;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  border-right: 0.06rem solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6.5rem;
+  animation: typing 2s steps(5, end), blink-caret-1 0.3s step-end 10 alternate;
+}
+.index-section .names span {
+  font-size: 1rem;
+  display: inline-block;
+  width: 1.3rem;
+  text-align: center;
+  opacity: 0.9;
+}
+.index-section .names span:first-child,
+.index-section .names span:last-child {
+  opacity: 0.2;
+}
+.index-section .profession {
+  border-right: 0.03rem solid;
+  font-size: 0;
+  width: 4.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: show 0.1s linear 3s forwards, typing 1s steps(8, end) 3s, blink-caret-2 0.4s step-end infinite alternate 3s;
+}
+.index-section .profession span {
+  display: inline-block;
+  width: 0.55rem;
+  text-align: center;
+  font-size: 0.5rem;
+  opacity: 0.8;
+}
+.about-section .bg {
+  background: url(../images/about_bg.png) repeat;
+  opacity: 0.9;
+}
+.about-section .img-bg {
+  background-image: url(../images/index_img_bg.jpg);
+  background-position: 50% top;
+  background-size: cover;
+}
+.about-section .about {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.2rem;
+  position: absolute;
+  margin: auto;
+  top: 5%;
+  right: 10%;
+  bottom: 5%;
+  left: 10%;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-section .me-box {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.about-section .my-info-box {
+  flex-grow: 0;
+  display: flex;
+}
+.about-section .portrait {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1.3rem;
+  overflow: hidden;
+  margin-right: 0.3rem;
+}
+.about-section .portrait img {
+  max-width: 100%;
+}
+.about-section .my-info-list {
+  font-size: 0.22rem;
+  padding-left: 0;
+  list-style: none;
+  margin: 0.2rem 0 0;
+}
+.about-section .my-info-list li {
+  opacity: 0.8;
+  margin: 0 0 0.1rem;
+}
+.about-section .my-info-list li .iconfont {
+  font-size: 0.24rem;
+  padding-right: 0.2rem;
+  opacity: 0.5;
+}
+.about-section .my-info-list li,
+.about-section .my-info-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+.about-section .skill-box {
+  color: #fff;
+  padding-top: 0.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.about-section .skill-box h3 {
+  font-size: 0.3rem;
+  margin: 0 0 0.5rem;
+}
+.about-section .skill-box dl {
+  margin: 0 1rem 0 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.about-section .skill-box dt {
+  font-size: 0.2rem;
+}
+.about-section .skill-box dt b {
+  font-weight: 400;
+}
+.about-section .skill-box dd {
+  height: 10px;
+  margin: 0.1rem 0 0.4rem;
+  font-size: 0;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+.about-section .skill-box dd span {
+  border-radius: 5px;
+  vertical-align: top;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+.about-section .skill-box dd span i {
+  position: absolute;
+  bottom: 220%;
+  font-size: 0.16rem;
+  font-style: normal;
+  right: -5%;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.1em 0.3em;
+  color: #000;
+}
+.about-section .skill-box dd span i::after {
+  border-width: 5px 5px 0;
+  border-color: #fff transparent;
+  border-style: solid dashed;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+.about-section .skill-box dd.skill-html span {
+  background-color: #EF6C18;
+  background-image: linear-gradient(to bottom, #EF6C18, #E54C21);
+}
+.about-section .skill-box dd.skill-js span {
+  background-image: linear-gradient(to bottom, #FAE200, #EFBF00);
+}
+.about-section .skill-box dd.skill-css span {
+  background-image: linear-gradient(to bottom, #00B9E5, #0095EB);
+}
+.about-section .skill-box dd.skill-vue span {
+  background-image: linear-gradient(to right, #00C589, #29475D);
+}
+.about-section .introduce {
+  flex-grow: 1;
+  width: 50%;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.about-section .introduce h3 {
+  font-size: 0.3rem;
+  margin: 0 0 0.5rem 0;
+  flex-shrink: 0;
+}
+.about-section .introduce .introduce-detail {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.about-section .introduce .introduce-detail p {
+  font-size: 0.22rem;
+  margin: 0 0 0.3rem 0;
+  line-height: 2;
+  text-indent: 2em;
+}
+.project-section .con {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.project-section .bg {
+  background: url(../images/project_bg.png) repeat;
+  opacity: 0.8;
+}
+.project-section .img-bg {
+  background-image: url(../images/project_img_bg.jpg);
+  background-position: 50% top;
+  background-size: cover;
+}
+.project-section h2 {
+  text-align: center;
+  font-size: 0.3rem;
+  color: #fff;
+  border-bottom: 0.05rem solid;
+  padding: 0.1rem 0;
+  position: relative;
+}
+.project-section h2::before {
+  content: '';
+  width: 50%;
+  height: 0.05rem;
+  background-color: #01C489;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.project-section .project-list {
+  list-style: none;
+  margin: 0;
+  flex-shrink: 0;
+  padding: 0;
+  flex-grow: 1;
+  font-size: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.project-section .project-list li {
+  width: 20%;
+  border-radius: 0.1rem;
+  background-color: #fff;
+  display: inline-block;
+  overflow: hidden;
+  margin: 2.5%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.project-section .project-list li .project-img img {
+  width: 100%;
+}
+.project-section .project-list li h5 {
+  font-size: 0.2rem;
+  text-align: center;
+}
+.project-section .project-list li h5 a {
+  color: #000;
+  text-decoration: none;
+}
+.project-section .project-list li .shade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-section .project-list li .shade .iconfont {
+  width: 0.6rem;
+  height: 0.6rem;
+  font-size: 0.4rem;
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+  margin: 0 0.1rem;
+  background-color: #01C489;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.project-section .project-list li .shade .iconfont:hover {
+  opacity: 1;
+}
+.project-section .project-list li .shade .iconfont.icon-link {
+  font-size: 0.33rem;
+}
+.project-section .project-list li:hover .shade {
+  opacity: 1;
+}
+.record-section .con {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.record-section .bg {
+  background: url(../images/record_bg.png) repeat;
+  opacity: 0.9;
+}
+.record-section .img-bg {
+  background-image: url(../images/record_img_bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.record-section h2 {
+  text-align: center;
+  font-size: 0.3rem;
+  color: #fff;
+  border-bottom: 0.05rem solid;
+  padding: 0.1rem 0;
+  position: relative;
+}
+.record-section h2::before {
+  content: '';
+  width: 50%;
+  height: 0.05rem;
+  background-color: #01B4D9;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.record-section .record-box {
+  display: flex;
+}
+.record-section .record-box dl {
+  border-left: 2px solid #666;
+  margin: 0 1rem;
+  position: relative;
+}
+.record-section .record-box dl dt .iconfont {
+  width: 0.6rem;
+  height: 0.6rem;
+  position: absolute;
+  background-color: #01B4D9;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.3rem;
+  left: -0.3rem;
+  top: -0.3rem;
+}
+.record-section .record-box dl dt span {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-size: 0.3rem;
+  transform: translateY(-50%);
+}
+.record-section .record-box dl dd {
+  padding: 0.1rem 0.2rem;
+  background-color: #fff;
+  border-radius: 0.06rem;
+  color: #000;
+  margin: 0.2rem 0 0.2rem 0.5rem;
+}
+.record-section .record-box dl dd::before {
+  content: '';
+  left: 0;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #01B4D9;
+  margin-left: -8px;
+}
+.record-section .record-box dl dd h6 {
+  font-size: 0.22rem;
+  margin: 0.1em 0 0.5em;
+}
+.record-section .record-box dl dd strong {
+  font-size: 0.16rem;
+  opacity: 0.4;
+}
+.record-section .record-box dl dd p {
+  font-size: 0.18rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+.record-section .teach-box,
+.record-section .work-box {
+  width: 50%;
+  font-size: 0.2rem;
+  color: #fff;
+}
+.record-section .teach-box dl dt .iconfont {
+  font-size: 0.4rem;
+}
+.page-menu {
+  position: fixed;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.page-menu a {
+  margin: 0 0 0.2rem 0;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 0.2rem;
+  border: 2px solid #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+.page-menu a::after {
+  transition: all 0.2s linear;
+  content: '';
+  background-color: #fff;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+}
+.page-menu a.active::after {
+  width: 60%;
+  height: 60%;
+}
+@media screen and (max-width: 770px) {
+  .about-section .about {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .about-section .me-box,
+  .about-section .introduce {
+    width: 100%;
+  }
+  .about-section .introduce {
+    height: 1px;
+    flex-grow: 1;
+  }
+  .about-section .skill-box dl {
+    margin-right: 0;
+  }
+  .record-section .record-box {
+    flex-direction: column;
+  }
+  .record-section .record-box .teach-box,
+  .record-section .record-box .work-box {
+    width: 100%;
+  }
+  .project-section .project-list li {
+    width: 45%;
+  }
+}
